@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaFacebook, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -26,10 +27,10 @@ export default function Footer() {
         >
           <h3 className="text-2xl font-bold mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="#hero" className="hover:underline">Home</a></li>
-            <li><a href="#about" className="hover:underline">About</a></li>
-            <li><a href="#skills" className="hover:underline">Skills</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
+            <li><Link to="hero" className="hover:underline">Home</Link></li>
+            <li><Link to="about" className="hover:underline">About</Link></li>
+            <li><Link to="skills" className="hover:underline">Skills</Link></li>
+            <li><Link to="contact" className="hover:underline">Contact</Link></li>
           </ul>
         </motion.div>
 
