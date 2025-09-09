@@ -86,9 +86,9 @@ export default function Hero() {
           </div>
         </motion.div>
       </Tilt>
-      <div className="absolute bottom-6 animate-bounce text-white text-xl">
+      <Link to="about" smooth duration={600} className="absolute bottom-6 animate-bounce text-white text-xl cursor-pointer">
         ↓ Scroll Down
-      </div>
+      </Link>
     </section>
   );
 }

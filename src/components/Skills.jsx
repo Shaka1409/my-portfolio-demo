@@ -1,6 +1,18 @@
 import { motion } from "framer-motion";
-import { FaPhp, FaLaravel, FaReact, FaDatabase, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiBootstrap, SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
+import {
+  FaPhp,
+  FaLaravel,
+  FaReact,
+  FaDatabase,
+  FaGitAlt,
+} from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiBootstrap,
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+} from "react-icons/si";
 
 export default function Skills() {
   const skills = [
@@ -15,11 +27,17 @@ export default function Skills() {
     { name: "MySQL", icon: <FaDatabase />, color: "text-yellow-600" },
     { name: "Git/GitHub", icon: <FaGitAlt />, color: "text-gray-700" },
   ];
+  const otherSkills = [
+    { name: "Problem-solving" },
+    { name: "Teamwork" },
+    { name: "English reading comprehension" },
+    { name: "Soft skills" },
+  ];
 
   return (
     <section
       id="skills"
-      className="h-screen py-20 bg-gradient-to-r from-blue-100 to-indigo-100"
+      className="min-h-screen py-20 bg-gradient-to-r from-blue-100 to-indigo-100"
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
         <motion.h2
@@ -47,6 +65,32 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
+        <div className="mt-10 text-left">
+  <motion.h3
+    initial={{ opacity: 0, y: -30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    className="text-2xl font-bold mb-6 text-indigo-600"
+  >
+    Other Skills
+  </motion.h3>
+
+  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    {otherSkills.map((skill, i) => (
+      <motion.li
+        key={i}
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.4, delay: i * 0.1 }}
+        className="flex items-center bg-gray-50 hover:bg-indigo-50 rounded-lg p-3 shadow-sm hover:shadow-md transition duration-300"
+      >
+        <span className="text-indigo-500 text-xl mr-3">✔</span>
+        <span className="text-gray-700 text-lg font-medium">{skill.name}</span>
+      </motion.li>
+    ))}
+  </ul>
+</div>
+
       </div>
     </section>
   );

@@ -6,18 +6,16 @@ export default function Projects() {
     {
       title: "NightLight E-commerce Site",
       date: "Feb 2025 - Jul 2025",
-      desc: "E-commerce platform for lamps with Laravel, Tailwind, and AJAX cart system.",
-      tech: ["Laravel", "PHP", "MySQL", "Tailwind", "AJAX"],
+      desc: "E-commerce platform for lamps with Laravel and Tailwind",
+      tech: ["Laravel", "PHP", "MySQL", "Tailwind"],
       github: "https://github.com/Shaka1409/LightNight",
-      demo: "#",
     },
     {
       title: "Portfolio Website",
       date: "2025",
       desc: "Personal portfolio built with React + Tailwind showcasing my skills and projects.",
       tech: ["React", "Tailwind", "Vite"],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/Shaka1409/my-portfolio-demo",
     },
   ];
 
@@ -78,15 +76,6 @@ export default function Projects() {
                   className="flex items-center gap-1 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition"
                 >
                   <FaGithub /> Code
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  href={p.demo}
-                  target="_blank"
-                  className="flex items-center gap-1 px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition"
-                >
-                  <FaExternalLinkAlt /> Demo
                 </motion.a>
               </div>
             </motion.div>

@@ -150,7 +150,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform disabled:opacity-50"
+                className="w-full py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform disabled:opacity-50 cursor-pointer"
               >
                 {loading ? "Sending..." : "Send Message 🚀"}
               </button>
